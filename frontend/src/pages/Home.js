@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import carousel from '../images/carousel.png';
 import carousel1 from '../images/carousel1.jpg';
 import carousel2 from '../images/carousel2.jpg';
 import carousel3 from '../images/carousel3.jpg';
@@ -10,82 +11,112 @@ import im4 from '../images/im4.jpg';
 import im5 from '../images/im5.jpg';
 import im6 from '../images/im6.jpg';
 import lcp from '../images/lcp.jpg';
-import explore from '../images/explore.jpg'; 
+import exploreImg from '../images/explore.jpg'
 import { Link } from 'react-router-dom'; 
+
+
 
 const Home = () => (
   <div className="container mt-4">
-    {/* Carousel Section */}
-    <Carousel interval={2000} controls={true} indicators={true}>
-      {/* 1. Carousel Item */}
-      <Carousel.Item>
-        <div style={{ position: 'relative' }}>
-          <img src={carousel1} className="d-block w-100" alt="First slide" />
-          <div
-            style={{
-              position: 'absolute',
-              bottom: '20px',
-              left: '50%',
-              transform: 'translateX(-50%)', 
-              backgroundColor: 'rgba(0, 0, 0, 0.6)', 
-              padding: '10px 20px',
-              color: 'white', 
-              fontSize: '1rem',
-              fontWeight: 'bold',
-              borderRadius: '8px',
-            }}
-          >
-            Hey AIESEC!
-          </div>
-        </div>
-      </Carousel.Item>
 
-      {/* 2. Carousel item */}
-      <Carousel.Item>
-        <div style={{ position: 'relative' }}>
-          <img src={carousel2} className="d-block w-100" alt="Second slide" />
-          <div
-            style={{
-              position: 'absolute',
-              bottom: '20px',
-              left: '50%',
-              transform: 'translateX(-50%)', 
-              backgroundColor: 'rgba(0, 0, 0, 0.6)', 
-              padding: '10px 20px',
-              color: 'white', 
-              fontSize: '1rem',
-              fontWeight: 'bold',
-              borderRadius: '8px',
-            }}
-          >
-            Welcome to AIESEC in CS
-          </div>
-        </div>
-      </Carousel.Item>
+   {/* New Section: Jumpstart your career */}
+   <section className="career-jumpstart-section mt-0" 
+  style={{
+    display: 'flex', 
+    alignItems: 'center', 
+    justifyContent: 'space-between', 
+    padding: '2rem', 
+    borderRadius: '12px', 
+    marginTop: '-40px',
+    flexWrap: 'wrap'
+  }}
+>
+  {/* Image on the top for mobile and left for desktop */}
+  <div className="image-content" 
+    style={{
+      width: '45%', 
+      textAlign: 'center',
+      marginBottom: '1rem',
+    }}
+  >
+    <img src={carousel} alt="Career Jumpstart" 
+      style={{
+        width: '100%', 
+        height: 'auto', 
+        borderRadius: '10px'
+      }} 
+    />
+  </div>
 
-      {/* 3. Carousel Item */}
-      <Carousel.Item>
-        <div style={{ position: 'relative' }}>
-          <img src={carousel3} className="d-block w-100" alt="Third slide" />
-          <div
-            style={{
-              position: 'absolute',
-              bottom: '20px',
-              left: '50%',
-              transform: 'translateX(-50%)', 
-              backgroundColor: 'rgba(0, 0, 0, 0.6)', 
-              padding: '10px 20px',
-              color: 'white', 
-              fontSize: '1rem',
-              fontWeight: 'bold',
-              borderRadius: '8px',
-            }}
-          >
-            A Journey of Excellence
-          </div>
-        </div>
-      </Carousel.Item>
-    </Carousel>
+  {/* Text content */}
+  <div className="text-content" 
+  style={{
+    width: '50%',
+    textAlign: 'left'
+  }}
+>
+  <h2 style={{ fontWeight: 'bold', color: '#555', fontSize: '2.8rem' }}>
+    Jumpstart your career with <span style={{ color: '#037ef3' }}>AIESEC</span> in Colombo South.
+  </h2>
+  <p style={{ fontSize: '1rem', color: '#555', marginTop: '1rem' }}>
+  Take the first step towards an impactful career with us. Experience the world, develop your leadership skills, and make a difference.  </p>
+</div>
+
+  {/* Media Query for Mobile Devices */}
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .career-jumpstart-section {
+          flex-direction: column !important;
+          align-items: center !important;
+        }
+        .text-content, .image-content {
+          width: 100% !important;
+        }
+        .image-content {
+          margin-bottom: 1rem !important; /* Space between image and text */
+        }
+      }
+    `}
+  </style>
+</section>
+
+{/* Explore Opportunities Section */}
+<section 
+      className="explore-opportunities mt-5"
+      style={{
+        background: `linear-gradient(135deg, rgba(12, 185, 193, 0.8), rgba(248, 90, 64, 0.8), rgba(244, 137, 36, 0.8)), url(${exploreImg}) center center/cover`, 
+        padding: '3rem', 
+        borderRadius: '12px', 
+        color: '#fff', 
+        boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)',
+        textAlign: 'center',
+        marginTop: '3rem',
+      }}
+    >
+      <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Explore Opportunities with CS</h2>
+      <p style={{ fontSize: '1.2rem', fontStyle: 'italic', marginBottom: '2rem' }}>
+        Join us and explore diverse opportunities in Computer Science that can accelerate your career and broaden your horizons.
+      </p>
+      <Link to="/opportunities" style={{
+        backgroundColor: '#037ef3', 
+        padding: '10px 20px', 
+        borderRadius: '5px', 
+        textDecoration: 'none', 
+        color: '#fff', 
+        fontSize: '1rem', 
+        fontWeight: 'bold',
+        transition: 'background-color 0.3s ease-in-out',
+      }}>
+        Explore Now
+      </Link>
+    </section>
+
+
+
+
+
+    
    {/* What is AIESEC -. section1 */}
 <section 
   id="about-us"
@@ -176,6 +207,8 @@ const Home = () => (
 
   </div>
 </section>
+ 
+
 
     {/* YouTube Video Embed Section */}
     <section className="unlock-potential mt-5" style={{ padding: '3rem', borderRadius: '12px', backgroundColor: '#f8f9fa', textAlign: 'center' }}>
@@ -211,7 +244,6 @@ const Home = () => (
   </div>
 );
 
-// Adding media query for mobile responsiveness
 const style = `
   @media (max-width: 768px) {
     .lcp-message {

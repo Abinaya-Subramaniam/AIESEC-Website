@@ -178,40 +178,7 @@ const Home = () => (
 </section>
 
 
-    {/* Explore Opportunities Section */}
-    <section 
-      className="explore-opportunities mt-5"
-      style={{
-        background: `linear-gradient(135deg, rgba(12, 185, 193, 0.8), rgba(248, 90, 64, 0.8), rgba(244, 137, 36, 0.8)), url(${explore}) center center/cover`, 
-        padding: '3rem', 
-        borderRadius: '12px', 
-        color: '#fff', 
-        boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)',
-        backgroundColor: 'rgba(0, 0, 0, 0.4)',
-        textAlign: 'center',
-        marginTop: '3rem',
-      }}
-    >
-      <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Explore Opportunities with CS</h2>
-      <p style={{ fontSize: '1.2rem', fontStyle: 'italic', marginBottom: '2rem' }}>
-        Join us and explore diverse opportunities that can accelerate your career and broaden your horizons.
-      </p>
-      <Link to="/opportunities" style={{
-        backgroundColor: '#037ef3', 
-        padding: '10px 20px', 
-        borderRadius: '5px', 
-        textDecoration: 'none', 
-        color: '#fff', 
-        fontSize: '1rem', 
-        fontWeight: 'bold',
-       
-      }}>
-        Explore Now
-      </Link>
-    </section>
-
-     {/* Unlock Potential Sec */}
-    <section 
+<section 
   className="unlock-potential mt-5"
   style={{
     padding: '3rem',
@@ -220,53 +187,24 @@ const Home = () => (
     textAlign: 'center',
   }}
 >
-  <h2 style={{ marginBottom: '2rem' }}>Unlock Your Potential with AIESEC</h2>
+  <h2 style={{ marginBottom: '2rem' }}>Catch a Glimpse at Lead CS 10.0</h2>
   
-  <div 
-    className="unlock-cards"
-    style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-      gap: '20px',
-    }}
-  >
-    {/* Empowering Others Card */}
-    <div className="card" style={{
-      padding: '1rem',
-      borderRadius: '8px',
-    }}>
-      <h3>Empowering Others</h3>
-      <p>Learn to communicate effectively in a diverse environment while empowering others.</p>
-    </div>
-
-    {/* Solution Oriented Card */}
-    <div className="card" style={{
-      padding: '1rem',
-      borderRadius: '8px',
-    }}>
-      <h3>Solution Oriented</h3>
-      <p>A new environment will test your skills to be solution-oriented and adaptable to overcome challenges.</p>
-    </div>
-
-    {/* World Citizen Card */}
-    <div className="card" style={{
-      padding: '1rem',
-      borderRadius: '8px',
-    }}>
-      <h3>World Citizen</h3>
-      <p>Exposure to different countries will increase awareness of global issues and empower you to become more of a world citizen.</p>
-    </div>
-
-    {/* Self Aware Card */}
-    <div className="card" style={{
-      padding: '1rem',
-      borderRadius: '8px',
-    }}>
-      <h3>Self Aware</h3>
-      <p>Going beyond what you know opens up new worlds for you. Find your values, explore your passions, and become more self-aware.</p>
-    </div>
+  {/* YouTube Video Embed */}
+  <div className="video-container" style={{ marginBottom: '2rem' }}>
+    <iframe
+      width="100%"
+      height="615"
+      src="https://www.youtube.com/embed/JuIgZZBIm0s"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
   </div>
+
+  
 </section>
+
 
 
     {/* Gallery Section */}

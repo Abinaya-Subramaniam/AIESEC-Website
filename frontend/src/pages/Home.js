@@ -177,121 +177,73 @@ const Home = () => (
   </div>
 </section>
 
-
-<section 
-  className="unlock-potential mt-5"
-  style={{
-    padding: '3rem',
-    borderRadius: '12px',
-    backgroundColor: '#f8f9fa',
-    textAlign: 'center',
-  }}
->
-  <h2 style={{ marginBottom: '2rem' }}>Catch a Glimpse at Lead CS 10.0</h2>
-  
-  {/* YouTube Video Embed */}
-  <div className="video-container" style={{ marginBottom: '2rem' }}>
-    <iframe
-      width="100%"
-      height="615"
-      src="https://www.youtube.com/embed/JuIgZZBIm0s"
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
-
-  
-</section>
-
-
+    {/* YouTube Video Embed Section */}
+    <section className="unlock-potential mt-5" style={{ padding: '3rem', borderRadius: '12px', backgroundColor: '#f8f9fa', textAlign: 'center' }}>
+      <h2 style={{ marginBottom: '2rem' }}>Catch a Glimpse at Lead CS 10.0</h2>
+      <div className="video-container" style={{ marginBottom: '2rem' }}>
+        <iframe width="100%" height="615" src="https://www.youtube.com/embed/JuIgZZBIm0s" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
+    </section>
 
     {/* Gallery Section */}
-<section 
-  className="image-gallery mt-5"
-  style={{
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-    gap: '20px',
-    padding: '2rem',
-    borderRadius: '8px',
-    backgroundColor: '#f8f9fa',
-    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-  }}
->
-  <h2 style={{ gridColumn: '1 / -1', textAlign: 'center', marginBottom: '1.5rem', color: '#037ef3' }}>
-    Moments Captured
-  </h2>
-  {[
-    { src: im1, alt: 'Gallery Image 1' },
-    { src: im2, alt: 'Gallery Image 2' },
-    { src: im3, alt: 'Gallery Image 3' },
-    { src: im4, alt: 'Gallery Image 4' },
-    { src: im5, alt: 'Gallery Image 5' },
-    { src: im6, alt: 'Gallery Image 6' },
-  ].map((image, index) => (
-    <div 
-      key={index} 
-      style={{
-        overflow: 'hidden', 
-        borderRadius: '8px', 
-        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
-      }}
-    >
-      <img 
-        src={image.src} 
-        alt={image.alt} 
-        style={{
-          width: '100%', 
-          height: '150px', 
-          objectFit: 'cover', 
-          transition: 'transform 0.3s ease',
-        }}
-        className="gallery-image"
-      />
-    </div>
-  ))}
-</section>
+    <section className="image-gallery mt-5" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '20px', padding: '2rem', borderRadius: '8px', backgroundColor: '#f8f9fa', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+      <h2 style={{ gridColumn: '1 / -1', textAlign: 'center', marginBottom: '1.5rem', color: '#037ef3' }}>Moments Captured</h2>
+      {[{ src: im1, alt: 'Gallery Image 1' }, { src: im2, alt: 'Gallery Image 2' }, { src: im3, alt: 'Gallery Image 3' }, { src: im4, alt: 'Gallery Image 4' }, { src: im5, alt: 'Gallery Image 5' }, { src: im6, alt: 'Gallery Image 6' }].map((image, index) => (
+        <div key={index} style={{ overflow: 'hidden', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)' }}>
+          <img src={image.src} alt={image.alt} style={{ width: '100%', height: '150px', objectFit: 'cover', transition: 'transform 0.3s ease' }} className="gallery-image" />
+        </div>
+      ))}
+    </section>
 
-
-    {/* Message from Local Committee President (LCP) */}
+    {/* Message from LCP Section */}
     <section className="lcp-message mt-5 d-flex align-items-center" style={{ display: 'flex', alignItems: 'center', marginTop: '2rem' }}>
-      {/* LCP Image */}
-      <div className="lcp-image-container" style={{
-        width: '200px', 
-        height: '180px', 
-        overflow: 'hidden', 
-        borderRadius: '50%', 
-        border: '1px solid #037ef3',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}>
-        <img src={lcp} className="lcp-image" alt="Local Committee President" style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-        }} />
+      <div className="lcp-image-container" style={{ width: '200px', height: '180px', overflow: 'hidden', borderRadius: '50%', border: '1px solid #037ef3', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <img src={lcp} className="lcp-image" alt="Local Committee President" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </div>
-
-      {/* LCP Message */}
       <div className="lcp-message-text" style={{ marginLeft: '20px', fontSize: '16px', width: '66%' }}>
         <h2 style={{ marginTop: 0 }}>Message from the <span style={{ color: '#037ef3' }}>LCP</span></h2>
-        <blockquote style={{
-          fontSize: '18px', 
-          fontStyle: 'italic', 
-          color: '#555', 
-          borderLeft: '5px solid #037ef3', 
-          paddingLeft: '15px',
-          marginBottom: '1.5rem'
-        }}>
-          "Welcome to <span style={{ color: '#037ef3' }}>AIESEC</span>! We are excited to have you here. <span style={{ color: '#037ef3' }}>AIESEC</span> is all about leadership, cultural exchange, and global opportunities. We aim to create a positive impact in society by empowering young people to become the leaders of tomorrow. Together, we can make a difference!"
+        <blockquote style={{ fontSize: '18px', fontStyle: 'italic', color: '#555', borderLeft: '5px solid #037ef3', paddingLeft: '15px', marginBottom: '1.5rem' }}>
+          "Welcome to <span style={{ color: '#037ef3' }}>AIESEC</span> We are excited to have you here. <span style={{ color: '#037ef3' }}>AIESEC</span> is all about leadership, cultural exchange, and global opportunities. We aim to create a positive impact in society by empowering young people to become the leaders of tomorrow. Together, we can make a difference!"
         </blockquote>
         <p style={{ fontWeight: 'bold', color: '#037ef3' }}>- Sadeesha Sathmina</p>
       </div>
     </section>
   </div>
 );
+
+// Adding media query for mobile responsiveness
+const style = `
+  @media (max-width: 768px) {
+    .lcp-message {
+      display: flex;
+      flex-direction: column; 
+      text-align: center;
+    }
+    .lcp-heading {
+      order: 1; 
+    }
+    .lcp-image-container {
+      order: 2; 
+      margin-bottom: 1rem;
+      width: 120px;
+      height: 120px;
+    }
+    .lcp-message-text {
+      order: 3; 
+      width: 100%;
+      margin-left: 0;
+    }
+    .aiesec-cards {
+      grid-template-columns: 1fr;
+    }
+    .video-container iframe {
+      height: 315px;
+    }
+  }
+`;
+
+
+
+document.head.insertAdjacentHTML('beforeend', `<style>${style}</style>`);
 
 export default Home;

@@ -1,9 +1,6 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+//import { Carousel } from 'react-bootstrap';
 import carousel from '../images/carousel.png';
-import carousel1 from '../images/carousel1.jpg';
-import carousel2 from '../images/carousel2.jpg';
-import carousel3 from '../images/carousel3.jpg';
 import im1 from '../images/im1.jpg';
 import im2 from '../images/im2.jpg';
 import im3 from '../images/im3.jpg';
@@ -207,7 +204,19 @@ const Home = () => (
 
   </div>
 </section>
- 
+ {/* Message from LCP Section */}
+ <section className="lcp-message mt-5 d-flex align-items-center" style={{ display: 'flex', alignItems: 'center', marginTop: '2rem' }}>
+      <div className="lcp-image-container" style={{ width: '200px', height: '180px', overflow: 'hidden', borderRadius: '50%', border: '1px solid #037ef3', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <img src={lcp} className="lcp-image" alt="Local Committee President" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      </div>
+      <div className="lcp-message-text" style={{ marginLeft: '20px', fontSize: '16px', width: '66%' }}>
+        <h2 style={{ marginTop: 0 }}>Message from the <span style={{ color: '#037ef3' }}>LCP</span></h2>
+        <blockquote style={{ fontSize: '18px', fontStyle: 'italic', color: '#555', borderLeft: '5px solid #037ef3', paddingLeft: '15px', marginBottom: '1.5rem' }}>
+          "Welcome to <span style={{ color: '#037ef3' }}>AIESEC</span> We are excited to have you here. <span style={{ color: '#037ef3' }}>AIESEC</span> is all about leadership, cultural exchange, and global opportunities. We aim to create a positive impact in society by empowering young people to become the leaders of tomorrow. Together, we can make a difference!"
+        </blockquote>
+        <p style={{ fontWeight: 'bold', color: '#037ef3' }}>- Sadeesha Sathmina</p>
+      </div>
+    </section>
 
 
     {/* YouTube Video Embed Section */}
@@ -228,19 +237,213 @@ const Home = () => (
       ))}
     </section>
 
-    {/* Message from LCP Section */}
-    <section className="lcp-message mt-5 d-flex align-items-center" style={{ display: 'flex', alignItems: 'center', marginTop: '2rem' }}>
-      <div className="lcp-image-container" style={{ width: '200px', height: '180px', overflow: 'hidden', borderRadius: '50%', border: '1px solid #037ef3', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <img src={lcp} className="lcp-image" alt="Local Committee President" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+{/* Testimonial Section */}
+<section>
+  <div className="container mt-5">
+    <h2 className="text-center mb-4">
+      Meet <span style={{ color: '#037ef3' }}>AIESEC</span>ers!
+    </h2>
+
+    <div
+      id="testimonialCarousel"
+      className="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"  
+      data-bs-pause="false"  
+    >
+      <div className="carousel-inner">
+        {/* Testimonial 1 */}
+        <div className="carousel-item active">
+          <div
+            className="card"
+            style={{
+              backgroundColor: '#f9f9f9',
+              border: '1px solid #ddd',
+              padding: '30px',
+              textAlign: 'center',
+              boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+              borderRadius: '8px',
+            }}
+          >
+            <img
+              src="https://via.placeholder.com/150"
+              className="card-img-top"
+              alt="Client 1"
+              style={{
+                borderRadius: '50%',
+                width: '150px',
+                height: '150px',
+                margin: '0 auto',
+              }}
+            />
+            <div className="card-body">
+              <h5 className="card-title">John Doe</h5>
+              <p
+                className="card-text"
+                style={{
+                  fontStyle: 'italic',
+                  color: '#555',
+                  marginTop: '15px',
+                }}
+              >
+                "This service changed my life! I was able to achieve more than I
+                ever thought possible."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonial 2 */}
+        <div className="carousel-item">
+          <div
+            className="card"
+            style={{
+              backgroundColor: '#f9f9f9',
+              border: '1px solid #ddd',
+              padding: '30px',
+              textAlign: 'center',
+              boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+              borderRadius: '8px',
+            }}
+          >
+            <img
+              src="https://via.placeholder.com/150"
+              className="card-img-top"
+              alt="Client 2"
+              style={{
+                borderRadius: '50%',
+                width: '150px',
+                height: '150px',
+                margin: '0 auto',
+              }}
+            />
+            <div className="card-body">
+              <h5 className="card-title">Jane Smith</h5>
+              <p
+                className="card-text"
+                style={{
+                  fontStyle: 'italic',
+                  color: '#555',
+                  marginTop: '15px',
+                }}
+              >
+                "Amazing experience. The support I received was invaluable and
+                helped me grow."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonial 3 */}
+        <div className="carousel-item">
+          <div
+            className="card"
+            style={{
+              backgroundColor: '#f9f9f9',
+              border: '1px solid #ddd',
+              padding: '30px',
+              textAlign: 'center',
+              boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+              borderRadius: '8px',
+            }}
+          >
+            <img
+              src="https://via.placeholder.com/150"
+              className="card-img-top"
+              alt="Client 3"
+              style={{
+                borderRadius: '50%',
+                width: '150px',
+                height: '150px',
+                margin: '0 auto',
+              }}
+            />
+            <div className="card-body">
+              <h5 className="card-title">Sam Wilson</h5>
+              <p
+                className="card-text"
+                style={{
+                  fontStyle: 'italic',
+                  color: '#555',
+                  marginTop: '15px',
+                }}
+              >
+                "I couldn't ask for a better opportunity. The team is amazing and
+                the process seamless."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonial 4 */}
+        <div className="carousel-item">
+          <div
+            className="card"
+            style={{
+              backgroundColor: '#f9f9f9',
+              border: '1px solid #ddd',
+              padding: '30px',
+              textAlign: 'center',
+              boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+              borderRadius: '8px',
+            }}
+          >
+            <img
+              src="https://via.placeholder.com/150"
+              className="card-img-top"
+              alt="Client 4"
+              style={{
+                borderRadius: '50%',
+                width: '150px',
+                height: '150px',
+                margin: '0 auto',
+              }}
+            />
+            <div className="card-body">
+              <h5 className="card-title">Emma Watson</h5>
+              <p
+                className="card-text"
+                style={{
+                  fontStyle: 'italic',
+                  color: '#555',
+                  marginTop: '15px',
+                }}
+              >
+                "A truly transformative experience. I learned so much and met
+                wonderful people!"
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="lcp-message-text" style={{ marginLeft: '20px', fontSize: '16px', width: '66%' }}>
-        <h2 style={{ marginTop: 0 }}>Message from the <span style={{ color: '#037ef3' }}>LCP</span></h2>
-        <blockquote style={{ fontSize: '18px', fontStyle: 'italic', color: '#555', borderLeft: '5px solid #037ef3', paddingLeft: '15px', marginBottom: '1.5rem' }}>
-          "Welcome to <span style={{ color: '#037ef3' }}>AIESEC</span> We are excited to have you here. <span style={{ color: '#037ef3' }}>AIESEC</span> is all about leadership, cultural exchange, and global opportunities. We aim to create a positive impact in society by empowering young people to become the leaders of tomorrow. Together, we can make a difference!"
-        </blockquote>
-        <p style={{ fontWeight: 'bold', color: '#037ef3' }}>- Sadeesha Sathmina</p>
-      </div>
-    </section>
+
+      {/* Carousel Controls */}
+      <button
+        className="carousel-control-prev"
+        type="button"
+        data-bs-target="#testimonialCarousel"
+        data-bs-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button
+        className="carousel-control-next"
+        type="button"
+        data-bs-target="#testimonialCarousel"
+        data-bs-slide="next"
+      >
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+    
   </div>
 );
 
